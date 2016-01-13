@@ -19,6 +19,10 @@ class Product
     @@products
   end
 
+  def self.in_stock
+    all.select(&:in_stock?)
+  end
+
   def in_stock?
     stock > 0
   end
