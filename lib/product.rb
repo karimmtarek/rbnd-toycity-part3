@@ -12,7 +12,7 @@ class Product
   end
 
   def self.find_by_title(title)
-    all.find { |product| product.title == title }
+    all.find(&:title)
   end
 
   def self.all
