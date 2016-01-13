@@ -9,7 +9,7 @@ class Customer
   end
 
   def self.find_by_name(name)
-    all.find(&:name)
+    all.find { |customer| customer.name == name }
   end
 
   def self.all
