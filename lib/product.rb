@@ -11,6 +11,10 @@ class Product
     add_to_products
   end
 
+  def self.find_by_title(title)
+    all.find { |product| product.title == title }
+  end
+
   def self.all
     @@products
   end
