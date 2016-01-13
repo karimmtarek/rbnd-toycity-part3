@@ -7,10 +7,21 @@ class Product
     @title = args[:title]
     @price = args[:price]
     @stock = args[:stock]
-    @@products << self
+
+    add_to_products
   end
 
   def self.all
     @@products
+  end
+
+  private
+
+  def add_to_products
+    @@products.each do |product|
+      raise DuplicateProductError.new "'#{title}' already exists." if product.title == title
+    end
+
+    @@products << self
   end
 end
