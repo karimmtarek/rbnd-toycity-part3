@@ -45,10 +45,8 @@ puts walter.name # Should return "Walter Latimer"
 # TRANSACTIONS
 
 transaction = Transaction.new(walter, nanoblock)
-transaction_2 = Transaction.new(walter, firehouse)
 
 puts transaction.id # Should return 1
-puts transaction_2.id # Should return 2
 puts transaction.product == nanoblock # Should return true
 puts transaction.product == firehouse # Should return false
 puts transaction.customer == walter # Should return true
@@ -57,12 +55,12 @@ puts nanoblock.stock # Should return 11
 
 # PURCHASES
 
-# puts walter.purchase(nanoblock)
+puts walter.purchase(nanoblock)
 
-# puts Transaction.all.count # Should return 2
+puts Transaction.all.count # Should return 2
 
-# transaction2 = Transaction.find(2)
-# puts transaction2.product == nanoblock # Should return true
+transaction2 = Transaction.find(2)
+puts transaction2.product == nanoblock # Should return true
 
 # walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
