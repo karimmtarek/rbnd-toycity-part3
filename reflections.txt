@@ -1,0 +1,13 @@
+How long did you spend working on this project?
+– I (guess) took me around 2-3 hours to finish it.
+
+What was the most rewarding challenge you conquered?
+– For me this assignment was really interesting not challenging, I liked how we started to work with multiple classes in the same app, I really enjoyed that :)
+
+What two additional features did you build? Why?
+1. Added a method to get all the transactions for a single customer. I think it's really useful in case we want to look into the history of one customer, and having this will make it easier to do my next feature :)
+2. Added a method to return purchases. I would be nice if a customer isn't happy with a purchase to return it, that's why ;)
+3. Added a customer error in case the customer is trying to return a purchase that doesn't exist. I think it's good to get a descriptive error message in that case.
+
+Where do you still have room to grow?
+– I think we just scratched the surface when it comes to object orianted design, and when things started to get complicated and there is going to be tons messages flying around the app, that's when things will get interested, basically what I'm trying to say is :) I think in the area of OO design that's where I think I need to grow.
