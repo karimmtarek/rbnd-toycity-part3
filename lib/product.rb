@@ -28,8 +28,9 @@ class Product
     stock > 0
   end
 
-  def update_product_inventory
-    self.stock -= 1
+  def update_product_inventory(update)
+    self.stock -= 1 if update == :-
+    self.stock += 1 if update == :+
   end
 
   private

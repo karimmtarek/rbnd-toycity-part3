@@ -64,3 +64,30 @@ puts transaction2.product == nanoblock # Should return true
 
 # walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+# NEW FEATURES
+puts ''
+puts '-> NEW FEATURES <-'
+puts ''
+puts "FEATURE #1: Get all customer's transactions"
+puts '-------------------------------------------'
+prod_1 = Product.new(title: "Product 1", price: 12.99, stock: 5)
+prod_2 = Product.new(title: "Product 2", price: 99.95, stock: 33)
+prod_3 = Product.new(title: "Product 3", price: 23.00, stock: 33)
+karim = Customer.new(name: "Karim")
+karim.purchase(prod_1)
+karim.purchase(prod_2)
+karim.purchase(prod_3)
+
+puts Transaction.where(customer: 'Karim')
+
+puts ''
+puts "FEATURE #2: Return a purchase"
+puts '-----------------------------'
+karim.purchase_return(4)
+puts Transaction.where(customer: 'Karim')
+
+puts ''
+puts "FEATURE #3: NoRecoredFound"
+puts '---------------------------------'
+kairm.purchase_return(10)

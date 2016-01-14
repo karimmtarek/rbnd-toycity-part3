@@ -20,6 +20,10 @@ class Customer
     Transaction.new(self, product)
   end
 
+  def purchase_return(transaction_id)
+    Transaction.delete(transaction_id)
+  end
+
   private
 
   def add_to_customers
