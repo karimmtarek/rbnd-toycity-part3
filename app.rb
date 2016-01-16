@@ -11,7 +11,7 @@ Product.new(title: "LEGO Firehouse Headquarter", price: 199.99, stock: 0)
 
 puts Product.all.count # Should return 3
 
-# Product.new(title: "LEGO Iron Man vs. Ultron", price: 22.99, stock: 55)
+Product.new(title: "LEGO Iron Man vs. Ultron", price: 22.99, stock: 55)
 # Should return DuplicateProductError: 'LEGO Iron Man vs. Ultron' already exists.
 
 nanoblock = Product.find_by_title("Nano Block Empire State Building")
@@ -62,7 +62,7 @@ puts Transaction.all.count # Should return 2
 transaction2 = Transaction.find(2)
 puts transaction2.product == nanoblock # Should return true
 
-# walter.purchase(firehouse)
+walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
 
 # NEW FEATURES
@@ -89,5 +89,5 @@ puts Transaction.where(customer: 'Karim')
 
 puts ''
 puts "FEATURE #3: NoRecoredFound"
-puts '---------------------------------'
-kairm.purchase_return(10)
+puts '--------------------------'
+karim.purchase_return(10)
